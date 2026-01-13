@@ -1,39 +1,69 @@
-Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+Hospital Management System
 
-This is a release of MySQL Connector/J, a JDBC Type 4 driver for MySQL that also
-supports the new X DevAPI.
+A console-based Hospital Management System developed using Java, JDBC, and MySQL. This project allows basic management of hospital operations such as handling doctors and patients through database connectivity.
 
-License information can be found in the LICENSE file. This distribution may
-include materials developed by third parties. For license and attribution
-notices for these materials, please refer to the LICENSE file.
 
-For more information on MySQL Connector/J, visit
-https://dev.mysql.com/doc/connector-j/en/.
+---
 
-For additional downloads and the source of MySQL Connector/J,
-visit https://dev.mysql.com/downloads/.
+🚀 Features
 
-MySQL Connector/J is brought to you by the MySQL team at Oracle.
+Add and view doctors
 
-Notice:
-- In order to use the logging capabilities provided by the default
-  implementation com.mysql.cj.log.Slf4JLogger, it is required to add one or more
-  jars for Simple Logging Facade for Java (SLF4J) to your CLASSPATH.
-- To use the X DevAPI features in Connector/J, you also need the external
-  library protobuf-java, which you can download manually from the official Maven
-  repository and add it to the CLASSPATH, or use Maven's automatic dependency
-  resolution features by adding a dependency to "GroupId: com.mysql" and
-  "ArtifactId: mysql-connector-j" to your project's pom.xml file.
-- To use OCI AIM authentication, you will need to add the external library
-  oci-java-sdk-common, which you can download manually from the official Maven
-  repository and add it to the CLASSPATH, or use Maven's automatic dependency
-  resolution features by adding a dependency to "GroupId: com.oracle.oci.sdk"
-  and "ArtifactId: oci-java-sdk-common" to your project's pom.xml file.
-- In order to enable OpenTelemtry native instrumentation, it is required to use
-  the OpenTelemetry libraries opentelemetry-api and opentelemetry-context, and
-  an OpenTelemetry implementation, typically the library opentelemetry-sdk or
-  the Java agent opentelemetry-javaagent, which you can download manually from
-  the official Maven repository and add it to the CLASSPATH, or use Maven's
-  automatic dependency resolution features, by adding a dependency to
-  "GroupId: io.opentelemetry" and the corresponding artifacts to your project's
-  pom.xml file.
+Add and view patients
+
+Fetch doctor details by ID
+
+MySQL database integration using JDBC
+
+Clean and simple console-based interface
+
+
+
+---
+
+🛠️ Technologies Used
+
+Java (Core Java)
+
+JDBC (Java Database Connectivity)
+
+MySQL (Relational Database)
+
+IntelliJ IDEA (IDE)
+
+Git & GitHub (Version Control)
+
+
+
+---
+
+📂 Project Structure
+
+HospitalManagementSystem/
+│
+├── src/
+│   ├── Doctor.java
+│   ├── Patient.java
+│   ├── HospitalManagementSystem.java
+│   └── Main.java
+│
+├── .gitignore
+└── README.md
+
+
+---
+
+⚙️ Database Setup
+
+1. Create a database in MySQL:
+
+CREATE DATABASE hospital;
+
+
+2. Create required tables (example):
+
+CREATE TABLE doctors (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    specialization VARCHAR(100)
+);
